@@ -1,0 +1,40 @@
+#cards {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+}
+
+.card {
+    width: 370px;
+    background-color: var(--color-light-gray);
+    padding: 20px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.cardImage{
+    width: 330px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card > div {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.card > div > h3{
+    font-size: 24px;
+}
+
+.card > div > p {
+    font-size: 18px;
+    margin-top: 5px;
+}

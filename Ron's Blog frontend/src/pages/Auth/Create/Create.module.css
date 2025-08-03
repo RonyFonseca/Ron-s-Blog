@@ -1,0 +1,46 @@
+.create {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.create > h2 {
+    font-size: 35px;
+    color: var(--color-light-gray);
+}
+
+.form {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.infosForm {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    max-width: 230px;
+}
+
+.infosForm > p {
+    margin-left: 10px;
+    margin-bottom: 2px;
+    font-weight: bolder;
+}
+
+.infosForm > p > Link {
+    cursor: pointer;
+}
+
+.infosForm > input {
+    height:40px;
+    border-radius: 40px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    background-color: var(--color-theme);
+    color: #ffff;
+}

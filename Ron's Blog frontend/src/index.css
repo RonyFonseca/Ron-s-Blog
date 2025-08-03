@@ -1,0 +1,21 @@
+:root {
+    --color-light-gray:#c1c1c188; 
+    --color-dark-gray: #737373a1;
+    --color-theme: #5271ff;
+    --color-theme2:rgb(255, 229, 82);
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+
+
+.colorTheme {
+    color: var(--color-theme);
+}

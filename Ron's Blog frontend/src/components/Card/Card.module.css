@@ -1,0 +1,74 @@
+.card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--color-light-gray);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cardHead {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.cardHead > div {
+    display: flex;
+    gap: 10px;
+}
+
+.person {
+    background-color: var(--color-dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+}
+
+.personInformationsHead {
+    display: flex;
+    flex-direction: column;
+}
+
+.personInformationsHead > h3 {
+    font-size: 17px;
+}
+
+.personInformationsHead > p {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.personInformationsHead > p > i {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.person > i  {
+    font-size: 40px;
+    color: var(--color-light-gray)
+}
+
+.links {
+    display: flex;
+}
+
+.links > button {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+

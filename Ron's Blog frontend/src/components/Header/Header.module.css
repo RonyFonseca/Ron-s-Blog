@@ -1,0 +1,20 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+    border-bottom: 2px solid var(--color-dark-gray);
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.header > div > nav > ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.logo {
+    width:50px;
+}
