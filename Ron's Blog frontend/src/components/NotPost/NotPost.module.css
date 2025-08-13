@@ -1,0 +1,9 @@
+.notPosts {
+    margin: auto;
+    text-align: center;
+    margin-top: 30px;
+    background-color: var(--color-light-gray);
+    padding: 40px;
+    width: 400px;
+    border-radius: 10px;
+}

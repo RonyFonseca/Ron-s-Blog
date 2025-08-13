@@ -3,6 +3,26 @@ import token from "../helpers/Token.js";
 
 class PostController{
 
+    static async getPostById(req, res){
+        const {idPost} = req.params;
+
+        if(!idPost){
+            res.status(400).json({message: "🔴 - Não tem id !"});
+            return;
+        }
+
+        const post = await Post.findById(idPost);
+
+
+        if(!post){
+            res.status(400).json({message: "🔴 - Post não encontrado !"});
+            return;
+        }
+
+
+        res.status(200).json({post});
+    }
+
     static async getMyPosts(req, res){
         try{
             const user = await token.getUserByToken(req, res);
@@ -166,7 +186,7 @@ class PostController{
     }
 
     static async editPost(req, res){
-        const {id} = req.params
+        const {idPost} = req.params
         const {title, content} = req.body; 
 
         const post = await Post.findById({_id:id});

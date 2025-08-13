@@ -1,6 +1,13 @@
+#dashBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #cards {
     display: flex;
     gap: 10px;
+    width: 100%;
     justify-content: space-evenly;
     align-items: center;
     height: 500px;
@@ -37,4 +44,18 @@
 .card > div > p {
     font-size: 18px;
     margin-top: 5px;
+}
+
+#countEdit {
+    border: none;
+    padding: 40px;
+    width: 400px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+
+#countEdit > i {
+    font-size: 40px;
 }

@@ -8,6 +8,8 @@ import { useEffect,useState } from "react";
 
 import api from "../../service/api.js";
 
+import NotPost from "../../components/NotPost/NotPost.jsx"
+
 function Home(){
 
     const [token] = useState(localStorage.getItem("token"));
@@ -57,7 +59,7 @@ function Home(){
                 </div>
             </div>
             <div className={styles.cards}>
-                {card.map((e) => <Card key={e._id} dono={e.postOwner} title={e.title} dataComent={dataHora(e.createdAt)} content={e.content} coments={e.coments} chave={e._id} likes={e.likes} save={e.saved}/>)}
+                {card.length==0? <NotPost msg="Ainda não existem posts"/> : card.map((e) => <Card key={e._id} dono={e.postOwner} title={e.title} dataComent={dataHora(e.createdAt)} content={e.content} coments={e.coments} chave={e._id} likes={e.likes} save={e.saved}/>)}
             </div>
         </div>
     )

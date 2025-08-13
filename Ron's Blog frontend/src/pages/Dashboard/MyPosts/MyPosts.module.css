@@ -1,5 +1,56 @@
+#alerta {
+    position: absolute;
+    margin: auto;
+    width: 400px;
+    left: 50%;
+    top: 30%;
+    background-color: rgb(199, 199, 199);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(129, 129, 129, 0.664); 
+}
+
+#alerta > h2 {
+    color: var(--color-theme3);
+    margin-bottom: 3px;
+}
+
+#alerta > p {
+    margin: 5px 0px;
+}
+
+#alerta > p > span {
+    color: var(--color-theme3)
+}
+
+#alerta > button {
+    width: 50px;
+    margin: 5px;
+    border: none; 
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffff;
+}
+
+#alertSim {
+    background-color: var(--color-theme);
+}
+
+#alertNao {
+    background-color: var(--color-theme3);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+}
+
 .card {
     width: 700px;
+    margin: 20px 50px;
+    background-color: var(--color-light-gray);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .cardHeader {
@@ -16,4 +67,65 @@
     padding: 10px;
     border-radius: 10px;
     border: none;
+}
+
+.editar {
+    background-color: var(--color-theme);
+    color: #ffff; 
+}
+
+.remover {
+    background-color: var(--color-theme3);
+    color: #ffff;
+}
+
+.cardInformations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.informationsPost > ul{
+    display: flex;
+    gap: 5px;
+    list-style: none;
+    list-style-position: inside;
+}
+
+.informationsPost {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.informationsPost > ul > li > button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.informationsDate {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.coments {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.coments > div {
+    margin-left: 10px;
+    background-color: var(--color-light-gray);
+    border-radius: 10px;
+    padding: 5px;
 }

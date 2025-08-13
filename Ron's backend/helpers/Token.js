@@ -45,8 +45,7 @@ class token {
 
 
         if(!token){
-            res.status(400).json({message:"🔴 - Token ausente ou malformado!"});
-            return;
+            return null;
         }
 
         try{
@@ -55,12 +54,12 @@ class token {
             const user = await User.findById(tokenDecoded.id);
 
             if(!user){
-                return res.status(404).json({ message: "🔴 - Usuário não encontrado!" });
+                return null;
             }
 
             return user;
         }catch(err){
-            res.status(500).json({message: err}); 
+            return null;
         }
 
     }

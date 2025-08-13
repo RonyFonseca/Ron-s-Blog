@@ -21,7 +21,7 @@ function Card(props){
                 }
             });
 
-                const usuario = res.data;
+                const usuario = res.data._id;
 
 
                 for (let i = 0; i < props.likes.length; i++) {

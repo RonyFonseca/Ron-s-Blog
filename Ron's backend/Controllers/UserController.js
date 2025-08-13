@@ -7,7 +7,13 @@ class UserController{
     static async getUserByToken(req, res){
         try{
             const user = await token.getUserByToken(req, res);
-            res.status(200).json(user._id);
+            const newUser = {
+                name: user.name,
+                age: user.age,
+                email: user.email,
+                _id: user._id
+            }
+            res.status(200).json(newUser);
         }catch(error){
             res.status(400).json({message: "🔴 - Erro ao pegar usuario !", error});
             return;
@@ -41,7 +47,7 @@ class UserController{
     }
 
     static async editUser(req, res){
-        const {name, age, password, confirmPassword} = req.body;
+        const {name, age} = req.body;
 
 
         const user = await token.getUserByToken(req, res);
@@ -62,28 +68,6 @@ class UserController{
 
         if(age != user.age){
             user.age = age; 
-        }
-
-        if(!password){
-            res.status(400).json({message: "🔴 - O campo de senha está sem nada !"});
-            return;
-        }
-
-        if(!confirmPassword){
-            res.status(400).json({message: "🔴 - O campo de confirmação de senha está sem nada !"});
-            return;
-        }
-
-        if(password != confirmPassword){
-            res.status(400).json({message: "🔴 - As senhas estão diferentes !"}); 
-            return
-        }
-
-        const confirmPasswordEncrypted = await encryption.confirmEncryptedPassword(password, user.password); //Ver se a senha é diferente da que ja existe no banco
-
-        if(!confirmPasswordEncrypted){
-            const newPassword = await encryption.encryptedPassword(password);
-            user.password = newPassword;
         }
 
         try{

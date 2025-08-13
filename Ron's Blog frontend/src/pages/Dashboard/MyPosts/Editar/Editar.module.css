@@ -1,0 +1,45 @@
+#formPost {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 100px auto;
+    gap: 10px;
+}
+
+#formPost > input, textarea {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: var(--color-light-gray);
+}
+
+#formPost > textarea {
+    height: 200px;
+}
+
+#formPost > div {
+    display: flex;
+    gap: 10px;
+}
+
+#formPost > div > button {
+    height: 35px;
+    border: none; 
+    border-radius: 10px;
+    color: #ffff;
+    padding: 5px;
+    width: 130px;
+    cursor: pointer;
+}
+
+#formPost > div > button {
+    background-color: var(--color-theme);
+}
+
+
+#atention {
+    font-size: 15px;
+}
